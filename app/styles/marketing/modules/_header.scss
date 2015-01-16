@@ -1,0 +1,7 @@
+.main-header{
+  @media #{$medium}{
+    height: $header-height;
+    position: absolute;
+    right: 0;
+  }
+}

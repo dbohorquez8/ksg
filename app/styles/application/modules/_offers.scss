@@ -1,0 +1,238 @@
+.offers-title{
+  border-bottom: 4px solid #F9F9F9;
+  position: relative;
+  & span{color: #88C974;}
+  &:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: -4px;
+    left: 0;
+    border-top: 1px solid darken(#F9F9F9, 10%);
+    box-shadow: 1px 0 rgba(black, 0.3);
+  }
+}
+
+.offers-body{
+  background-color: #FbFbFb;
+}
+
+.offer-card__action{
+  margin-bottom: 0;
+}
+
+.offer-detail{
+  font-weight: 600;
+}
+
+.offer-detail__title{
+  font-size: em(28);
+  line-height: $line-height-small;
+  margin-bottom: $half-spacing-unit;
+}
+.offer-detail__sub,
+.offer-detail__phone{
+  font-size: em(18);
+  margin-bottom: $base-spacing-unit;
+}
+
+.offer-detail__image{
+  border: 1px solid #EEEEEE;
+  display: none;
+  @media #{$medium} {
+    display: block;
+  }
+}
+.offer-detail__phone{
+  @extend .uppercase;
+  color: $teal;
+}
+
+.price-range{
+  font-weight: 600;
+  del{
+    color: #DE8560;
+    font-weight: 400;
+    font-size: 0.8em;
+  }
+}
+
+.offer-detail__price-range{
+  @extend .price-range;
+  font-size: 35px;
+  margin-bottom: $base-spacing-unit;
+}
+
+.offer-detail__date{
+  @extend .offer-card__date;
+  margin-bottom: $base-spacing-unit;
+}
+
+.offers-showdown{
+  margin-bottom: $base-spacing-unit * 2;
+}
+
+
+.explore__title,
+.explore-list{
+  font-size: em(18);
+}
+.explore__title{
+  color: #CCCCCC;
+  text-transform: uppercase;
+  padding: 6px 0;
+  margin: 0;
+}
+
+.explore-list{
+  @extend .block-list;
+  border-top-color: #EEEEEE;
+  border-bottom-color: white;
+  overflow: hidden;
+  margin-bottom: $half-spacing-unit;
+  border-bottom-width: 1px;
+  @media #{$medium} {
+    border-bottom-width: 0;
+  }
+}
+
+.explore-list{
+  font-weight: 600;
+  text-transform: capitalize;
+  & > li{
+    padding: 6px;
+    border-style: solid;
+    border-top-width: 1px;
+    border-bottom-color: #EEEEEE;
+    border-top-color: white;
+    float: left;
+    width: 50%;
+    @media #{$medium} {
+      padding: 6px 6px 6px 24px;
+      float: none;
+      width: 100%;
+    }
+    &:last-child{
+      @media #{$medium}{
+        border-bottom-width: 0;
+      }
+    }
+    & > a{
+      color: #6D6E6D;
+      display: block;
+    }
+  }
+}
+
+.provider-data{
+  @extend .panel;
+  @extend .panel--default;
+  box-shadow: none;
+  padding: $half-spacing-unit;
+  margin-bottom: 0;
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  @media #{$medium}{
+    max-width: none;
+  }
+}
+
+#map{
+  height: 250px;
+  width: 100%;
+}
+
+.provider-data__map{
+  margin-bottom: $base-spacing-unit;
+  overflow: hidden;
+  border-radius: $border-radius-large $border-radius-large 0 0;
+}
+.provider-data__title{
+  @extend .epsilon;
+  margin-bottom: $half-spacing-unit;
+  > a{
+    color: inherit;
+  }
+}
+.provider-operation{
+  font-size: 13px;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+}
+.provider-operation__title{
+  @extend .uppercase;
+  font-size: em(13, 13);
+  font-weight: 700;
+}
+
+.provider__about{
+  font-size: em(13);
+  p{
+    margin-bottom: $base-spacing-unit
+  }
+}
+
+.provider__logo-box{
+  @extend .islet;
+  background-color: white;
+  margin-bottom: $base-spacing-unit;
+  display: inline-block;
+  height: 105px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.provider__details{
+  h2{
+    font-size: em(18);
+    margin-bottom: $half-spacing-unit;
+  }
+}
+
+.provider__logo-box--natural{
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.provider__logo-box--simple{
+  border-radius: 0;
+  box-shadow: none;
+  border: 1px solid $brand-ui;
+  padding: 20px 15px 15px;
+}
+
+.provider-logo-area{
+  margin-bottom: $base-spacing-unit;
+  > *{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+.provider-logo__text{
+  margin-left: $half-spacing-unit;
+  > *{
+    margin-bottom: 0;
+  }
+}
+
+.provider-logo__title{
+  font-size: $font-size-h5;
+  margin-bottom: 0;
+}
+
+.actions-nav{
+  max-width: 430px;
+}
+
+.actions-nav__checkbox,
+.actions-nav__group{
+  display: none;
+}
+.actions-nav__group{
+  @extend .grid;
+  @extend .grid--narrow;
+  margin-bottom: $half-spacing-unit;
+}

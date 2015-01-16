@@ -1,0 +1,221 @@
+@mixin text-truncate() {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.vertical-center--inline{
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    margin-left: -4px;
+    vertical-align: middle;
+  }
+}
+
+.cf,
+.clearfix{
+  @include clearfix();
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: $border-radius-large;
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+.display-none{
+  display: none;
+}
+
+.float-start{
+  float: left;
+}
+.float-end{
+  float: right;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0 ;
+}
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+%image-replace {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+%main-sprite{
+  .svg &{
+    background-image: image-url("new/sprite.svg");
+  }
+  .no-svg &{
+    background-image: image-url("new/sprite.png");
+  }
+  background-repeat:no-repeat;
+  display: inline-block;
+  *display: inline;
+}
+
+.block{display: block !important;}
+.text-center{text-align: center;}
+.valignm{vertical-align: middle;}
+.medium--text-center{
+  text-align: center;
+  @media #{$medium} {
+    text-align: inherit;
+  }
+}
+.text-left{text-align: left;}
+.text-right{text-align: right;}
+
+.small--text-right{
+  @media #{$small} {
+    text-align: right;
+  }
+}
+.small--text-left{
+  @media #{$small} {
+    text-align: left;
+  }
+}
+
+.medium--text-right{
+  @media #{$medium} {
+    text-align: right;
+  }
+}
+.medium--text-left{
+  @media #{$medium} {
+    text-align: left;
+  }
+}
+
+
+.line-height--large{line-height: $line-height-small;}
+.line-height--small{line-height: $line-height-large;}
+
+.uppercase,
+%uppercase{text-transform: uppercase;}
+.underline{text-decoration: underline;}
+.relative,
+%relative{position: relative;}
+.inline-block{display: inline-block;}
+.face-bold{font-weight: 700;}
+.face-semi{font-weight: 600;}
+.face-regular{font-weight: 400;}
+.face-light{font-weight: 300;}
+.text--large{font-size: em($font-size-large) !important;}
+.text--small{font-size: em($font-size-small) !important;}
+.text--smaller{font-size: em($font-size-smaller) !important;}
+
+
+/**
+ * Add/remove margins
+ */
+.push           { margin:       $base-spacing-unit!important; }
+.push--top      { margin-top:   $base-spacing-unit!important; }
+.push--right    { margin-right: $base-spacing-unit!important; }
+.push--bottom   { margin-bottom:$base-spacing-unit!important; }
+.push--left     { margin-left:  $base-spacing-unit!important; }
+.push--ends     { margin-top:   $base-spacing-unit!important; margin-bottom:$base-spacing-unit!important; }
+.push--sides    { margin-right: $base-spacing-unit!important; margin-left:  $base-spacing-unit!important; }
+
+.push-half          { margin:       $half-spacing-unit!important; }
+.push-half--top     { margin-top:   $half-spacing-unit!important; }
+.push-half--right   { margin-right: $half-spacing-unit!important; }
+.push-half--bottom  { margin-bottom:$half-spacing-unit!important; }
+.push-half--left    { margin-left:  $half-spacing-unit!important; }
+.push-half--ends    { margin-top:   $half-spacing-unit!important; margin-bottom:$half-spacing-unit!important; }
+.push-half--sides   { margin-right: $half-spacing-unit!important; margin-left:  $half-spacing-unit!important; }
+
+.push-quarter--bottom  { margin-bottom:$half-spacing-unit / 2!important; }
+.push-double--bottom  { margin-bottom:$base-spacing-unit * 2!important; }
+
+.flush          { margin:       0!important; }
+.flush--top     { margin-top:   0!important; }
+.flush--right   { margin-right: 0!important; }
+.flush--bottom  { margin-bottom:0!important; }
+.flush--left    { margin-left:  0!important; }
+.flush--ends    { margin-top:   0!important; margin-bottom:0!important; }
+.flush--sides   { margin-right: 0!important; margin-left:  0!important; }
+
+
+/**
+ * Add/remove paddings
+ */
+.soft           { padding:       $base-spacing-unit!important; }
+.soft--top      { padding-top:   $base-spacing-unit!important; }
+.soft--right    { padding-right: $base-spacing-unit!important; }
+.soft--bottom   { padding-bottom:$base-spacing-unit!important; }
+.soft--left     { padding-left:  $base-spacing-unit!important; }
+.soft--ends     { padding-top:   $base-spacing-unit!important; padding-bottom:$base-spacing-unit!important; }
+.soft--sides    { padding-right: $base-spacing-unit!important; padding-left:  $base-spacing-unit!important; }
+
+.soft-half           { padding:       $half-spacing-unit!important; }
+.soft-half--top      { padding-top:   $half-spacing-unit!important; }
+.soft-half--right    { padding-right: $half-spacing-unit!important; }
+.soft-half--bottom   { padding-bottom:$half-spacing-unit!important; }
+.soft-half--left     { padding-left:  $half-spacing-unit!important; }
+.soft-half--ends     { padding-top:   $half-spacing-unit!important; padding-bottom:$half-spacing-unit!important; }
+.soft-half--sides    { padding-right: $half-spacing-unit!important; padding-left:  $half-spacing-unit!important; }
+
+.hard           { padding:       0!important; }
+.hard--top      { padding-top:   0!important; }
+.hard--right    { padding-right: 0!important; }
+.hard--bottom   { padding-bottom:0!important; }
+.hard--left     { padding-left:  0!important; }
+.hard--ends     { padding-top:   0!important; padding-bottom:0!important; }
+.hard--sides    { padding-right: 0!important; padding-left:  0!important; }
+
+.text--right    { text-align:right !important; }
+
+$colors: (
+  '.color-success' $brand-success,
+  '.color-danger' $brand-danger,
+  '.color-warning' $brand-warning,
+  '.color-info' $brand-info,
+  '.color-teal' $teal-light,
+  '.color-gold' $gold,
+  '.color-primary' $brand-primary,
+  '.color-text-secondary' #56B69F,
+  '.color-warning-dark' $orange-dark,
+  '.color-gray-darker '$gray-darker,
+  '.color-gray-dark '$gray-dark,
+  '.color-gray ' $gray,
+  '.color-gray-light ' $gray-light,
+  '.color-gray-lighter' $gray-lighter
+);
+
+@each $color in $colors{
+  $name: nth($color, 1);
+  $clr: nth($color, 2);
+  #{$name}{
+    color: #{$clr};
+  }
+}

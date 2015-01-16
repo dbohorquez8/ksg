@@ -1,0 +1,38 @@
+.actions{
+  @include rem(16);
+  text-align: center;
+}
+
+.actions__action{
+  font-size: em(20);
+  &.actions__action--success:hover{
+    color: $color-success;
+  }
+  &.actions__action--warning:hover{
+    color: $color-warning;
+  }
+  &.actions__action--info:hover{
+    color: $color-info;
+  }
+  &.actions__action--danger:hover{
+    color: $color-danger;
+  }
+}
+
+.actions--simple{
+  @extend .actions__action;
+  color: $color-primary-light;
+}
+
+.actions__action--success{
+  @extend .icon-round-check;
+}
+.actions__action--warning{
+  @extend .icon-round-minus;
+}
+.actions__action--info{
+  @extend .icon-round-envelope;
+}
+.actions__action--danger{
+  @extend .icon-round-close;
+}

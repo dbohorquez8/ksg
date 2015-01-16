@@ -1,0 +1,97 @@
+.dropdown{
+  position: relative;
+  display: inline-block;
+  text-align: left;
+}
+
+.dropdown--static{
+  position: static;
+}
+
+.dropdown--hover{
+  &:hover{
+    .dropdown__box{
+      display: block;
+    }
+  }
+}
+.dropdown__trigger{
+  border-radius: $global-radius;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  z-index: 99;
+}
+.dropdown__box{
+  position: absolute;
+  right: 0;
+  top: 100%;
+  display: none;
+  z-index: 98;
+  &[data-state="open"],
+  &.is-open{
+    display: inherit;
+  }
+}
+.dropdown__box--session{ /* TO DO: Redefine as a size modifier */
+  min-width: 110%;
+  text-align: right;
+}
+.dropdown__box--full{
+  width: 100%;
+}
+
+$button-line-height:     4px;
+
+.drop-list dd {
+  white-space: nowrap;
+}
+
+//theme
+
+.mobile-dropdown-menu{
+  top: 52px;
+  background-color: white;
+}
+
+.mobile-dropdown-menu__users{
+  background: #f7f7f7;
+  border-bottom: 1px solid $brand-ui;
+}
+
+.dropdown--main{
+  &[data-state="open"]{
+    > *:first-child{
+      border-bottom-color: #8FB8B7;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+  .dropdown__box{
+    a:hover{
+      background: #AFCFCE;
+    }
+  }
+}
+.dropdown__trigger--main,
+.dropdown__box--main{
+  background: #8FB8B7;
+  border: 1px solid darken($teal, 3%);
+}
+.dropdown__trigger--main{
+  text-transform: capitalize;
+  font-weight: 700;
+}
+.dropdown__box--main{
+  padding-bottom: 10px;
+  border-radius: $global-radius 0 $global-radius $global-radius;
+  top: 98%;
+}
+
+.credit-card__explain{
+  @include arrow(top, center, white, $brand-ui);
+  width: 200px;
+  right: 50%;
+  margin-right: -100px;
+  top: 150%;
+}

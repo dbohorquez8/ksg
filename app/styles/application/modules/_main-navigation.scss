@@ -1,0 +1,133 @@
+.main-nav__list{
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.main-nav__item{
+  display: inline-block;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: #48849A;
+  &:first-child{
+    border-left-width: 1px;
+  }
+}
+
+.main-nav__link{
+  padding: 0 12px;
+  display: block;
+  & > strong{
+    @extend .uppercase;
+    font-size: em(16);
+    display: block;
+  }
+}
+
+
+
+//refactor theme for common colors
+
+.drop-list{
+  font-weight: bold;
+  dd{
+    margin-left: 0;
+  }
+}
+.drop-list__title{
+  color: #CFE6E5;
+  text-transform: uppercase;
+  font-size: em(10);
+  padding: 10px 10px 2px;
+}
+.drop-list__link,
+.mobile-nav__link{
+  color: #444;
+  display: block;
+  padding: 2px 6px;
+}
+.drop-list__link--last{
+  border-bottom-width: 0;
+}
+.mobile-nav__list{
+  padding-left: 0;
+  list-style: none;
+}
+.dropdown-user{
+  font-weight: bold;
+  padding: 2px 10px 10px;
+  dd,dt{
+    display: inline-block;
+  }
+  dt{
+    color: #CFE6E5;
+    font-size: em(10);
+    text-transform: uppercase;
+  }
+}
+
+.dropdown__box--mobile{
+  .drop-list__title,
+  .drop-list__link,
+  .mobile-nav__link{
+    border-bottom: 1px solid #6EA49F;
+  }
+  .drop-list__link--last{
+    border-bottom-width: 0;
+  }
+}
+
+.mobile--nav--alt{
+  @media #{$medium} {
+    display: block!important;
+  }
+  @media #{$medium-max} {
+    position: absolute;
+    top: em(40, 14);
+    left: -$half-spacing-unit;
+    right: -$half-spacing-unit;
+    ul{
+      padding-left: $half-spacing-unit;
+      padding-right: $half-spacing-unit;
+    }
+    z-index: 99;
+    li{
+      display: list-item;
+      a{
+        display: block;
+        padding: $half-spacing-unit / 2 0;
+      }
+      &.list__spacer{
+        padding-bottom: $half-spacing-unit;
+        border-bottom: 1px solid rgba(black, 0.15);
+        & + li{
+          padding-top: $half-spacing-unit;
+        }
+      }
+    }
+  }
+}
+.mobile-nav--light{
+  @media #{$medium-max} {
+    background-color: #F7F7F7;
+    border-top: 2px solid #CFD9D8;
+    box-shadow: 0 2px 2px 1px rgba(0,0,0,0.1);
+  }
+}
+
+
+.nav--alt{
+  font-weight: 600;
+  font-size: $font-size-large;
+  padding: em(5) 0;
+  a{
+    color: $gray-light;
+    &:hover,
+    &:active{
+      color: darken($gray-light, 5%);
+    }
+  }
+  .nav__item{
+    padding: 0 em(5);
+  }
+}

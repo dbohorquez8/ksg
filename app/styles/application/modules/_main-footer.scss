@@ -1,0 +1,9 @@
+.alt-footer{
+   background-color: #fff;
+   height: auto;
+   margin-top: $base-spacing-unit * 2;
+   padding: $base-spacing-unit * 2 0;
+   @media #{$small} {
+     height: 230px;
+   }
+}

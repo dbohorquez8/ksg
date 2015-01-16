@@ -1,0 +1,36 @@
+.dashboard__header{
+  @include clearfix();
+  margin-bottom: em($line-height-computed);
+  padding-top: em($line-height-computed);
+}
+.dashboard__title{
+  font-size: em(24);
+  color: $color-brand;
+  text-transform: uppercase;
+  margin: 0;
+  & > span{
+    font-size: em(16, 24);
+    text-transform: capitalize;
+  }
+}
+
+//Dashboard Empty box
+.dashboard-empty{
+  text-align: center;
+}
+.dashboard-empty__title,
+.dashboard-empty__subtitle{
+  font-weight: 600;
+}
+.dashboard-empty__title,
+.dashboard-empty__help-text{
+  color: $color-brand;
+}
+.dashboard-empty__subtitle{
+  font-size: em(16);
+  margin-bottom: em($line-height-computed * 2);
+  color: $color-foreground;
+}
+.dashboard-empty__help-text{
+  font-size: em(20);
+}

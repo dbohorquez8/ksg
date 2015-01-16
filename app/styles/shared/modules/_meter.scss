@@ -1,0 +1,60 @@
+$meter-background-color:           $gray-lighter;
+$meter-foreground-color:           $brand-info;
+$meter-title-color:                $brand-info;
+$meter-bar-background:             $color-brand;
+
+@mixin meter-variation($meter-background, $meter-foreground, $meter-title-color, $meter-bar) {
+  .meter__title{
+    color: $meter-title-color;
+  }
+  .meter__number{
+    color: $meter-foreground;
+  }
+  .meter{
+    background: $meter-background;
+  }
+  .meter__bar{
+    background-color: $meter-bar;
+  }
+}
+
+.meter-area{
+  @extend .cf;
+  @include rem(16);
+  display: block;
+  text-align: center;
+}
+.meter__title,
+.meter__number{
+  font-size: em(10, 16);
+}
+.meter__container{
+  overflow: hidden;
+}
+.meter__title{
+  display: block;
+  cursor: pointer;
+}
+.meter__number{
+  float: right;
+  margin-left: $line-height-computed / 4;
+  line-height: 1;
+}
+.meter,
+.meter__bar{
+  border-radius: 1000px;
+}
+.meter{
+  position: relative;
+  height: 10px;
+
+}
+.meter__bar{
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+.meter--default{
+  @include meter-variation($meter-background-color, $meter-foreground-color, $meter-title-color, $meter-bar-background);
+}

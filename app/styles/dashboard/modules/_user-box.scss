@@ -1,0 +1,49 @@
+$color-image-background:                 $brand-ui;
+
+$color-light-foreground:                 $color-brand;
+$color-light-name-foreground:            $color-foreground;
+
+$color-dark-foreground:                  $gray-lighter;
+$color-dark-name-foreground:             white;
+
+
+.user-box{
+  white-space: nowrap;
+  min-width: em(200);
+  text-align: left;
+  .media__img{
+    margin-right: $line-height-computed / 2;
+  }
+}
+.user-box__image-container{
+  @include size(em(52));
+  border-radius: 1000px;
+  background-color: $color-image-background;
+  border: 3px solid transparent;
+  overflow: hidden;
+}
+.user-box__name,
+.user-box__action{
+  font-weight: 700;
+}
+.user-box__name{
+  margin-bottom: 0;
+}
+.user-box__action{
+  font-size: em(12);
+}
+.user-box__caret{
+  margin-left: $line-height-computed / 4;
+}
+
+.user-box--dark{
+  .user-box__image-container{border-color: #83A4CC;}
+  .user-box__action{color: #83A4CC;}
+  .user-box__name{color: $color-dark-name-foreground;}
+}
+
+.user-box--light{
+  .user-box__image-container{border-color: $color-light-foreground;}
+  .user-box__action{color: $color-light-foreground;}
+  .user-box__name{color: $color-light-name-foreground;}
+}

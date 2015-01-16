@@ -1,0 +1,76 @@
+.mobile-button--alt{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin mobile-button-style($btn-bg, $lines-bg) {
+  background: $btn-bg;
+  span{
+    &,
+    &:after,
+    &:before{
+      background-color: $lines-bg;
+    }
+  }
+}
+
+.mobile-menu-button{
+  @include transition(left 0.2s ease-out);
+  @include transform(translate3d(0, 0, 0));
+  @include box-sizing(border-box);
+  @include rem(11);
+  background: #000;
+  background: rgba(0, 0, 0, 0.7);
+  display: block;
+  z-index: 10;
+  width: 3em;
+  height: 3em;
+  padding: 0.5em;
+  span{
+    position: relative;
+    display: block;
+    margin-top: 0.7em;
+    &,
+    &:after,
+    &:before{
+      @include transition(all 0.2s);
+      background-color: #FFF;
+      width: 100%;
+      height: em(3, 11);
+    }
+    &:after,
+    &:before{
+      position: absolute;
+      top: -.55em;
+      content: " ";
+    }
+    &:after{
+      top: .55em;
+    }
+  }
+  &.is-active,
+  &.is-open,
+  .is-open > &{
+    span{
+      background: rgba(0, 0, 0, 0);
+      &:before{
+        @include transform(rotate(45deg) translate(.4em, .5em));
+      }
+      &:after{
+        @include transform(rotate(-45deg) translate(.3em, -.4em));
+      }
+    }
+  }
+  @media #{$medium} {
+    display: none;
+  }
+}
+
+.mobile-menu-button--light{
+  @include mobile-button-style(#fff, #91918E)
+}
+
+.mobile-menu-button--transparent{
+  @include mobile-button-style(transparent, #FFF)
+}

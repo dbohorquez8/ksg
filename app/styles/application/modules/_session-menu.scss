@@ -1,0 +1,11 @@
+.session-menu__message{
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+.session-menu__toggle{
+  padding: 10px;
+  border-radius: 0 0 $global-radius $global-radius;
+  border-top-width: 0;
+  min-width: 85px;
+}

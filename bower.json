@@ -1,0 +1,12 @@
+{
+  "name": "ksg",
+  "version": "0.0.0",
+  "dependencies": {
+    
+    "jquery": "~2.1.1",
+    "bourbon": "3.2.0",
+    "google-code-prettify": "~1.0.3"
+    
+  },
+  "devDependencies": {}
+}

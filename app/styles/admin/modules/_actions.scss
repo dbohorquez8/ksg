@@ -1,0 +1,41 @@
+.actions{
+  @include rem(14);
+  text-align: right;
+  letter-spacing: 2;
+  max-width: em(100, 14);
+  vertical-align: middle;
+}
+
+.actions__action{
+  font-size: em(20);
+  &.actions__action--success{
+    color: $brand-success;
+  }
+  &.actions__action--warning{
+    color: $brand-warning;
+  }
+  &.actions__action--info{
+    color: $brand-info;
+  }
+  &.actions__action--danger{
+    color: $brand-danger;
+  }
+}
+
+.actions--simple{
+  @extend .actions__action;
+  color: $gray-light;
+}
+
+.actions__action--success{
+  @extend .icon-round-check;
+}
+.actions__action--warning{
+  @extend .icon-round-minus;
+}
+.actions__action--info{
+  @extend .icon-round-envelope;
+}
+.actions__action--danger{
+  @extend .icon-round-close;
+}

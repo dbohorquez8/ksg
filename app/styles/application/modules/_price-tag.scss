@@ -1,0 +1,40 @@
+.price-tag{
+  font-size: em(36);
+  color: $brand-success;
+  line-height: $line-height-large;
+  font-weight: 600;
+  & > ins{
+    text-decoration: none;
+  }
+  & > sup{
+    font-size: 0.4em;
+    top: -1.2em;
+  }
+  & > del{
+    font-size: em(24, 35);
+    color: $dark-orange;
+    vertical-align: middle;
+  }
+}
+
+.price-tag--dark{
+  color: inherit;
+}
+
+.price-tag--medium{
+  font-size: em(24);
+  line-height: $line-height-small;
+}
+
+.offer-prices{
+  padding: em(18) em(40);
+  margin-left: -$half-spacing-unit;
+  margin-right: -$half-spacing-unit;
+  margin-bottom: $half-spacing-unit;
+  @media #{$small} {
+    max-width: 300px;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: $border-radius-base;
+  }
+}

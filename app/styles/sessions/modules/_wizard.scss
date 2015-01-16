@@ -1,0 +1,16 @@
+$wizard-icon-size: 100;
+
+.wizard__video{
+  position: relative;
+}
+
+.wizard__video-icon{
+  @include size(em($wizard-icon-size, $wizard-icon-size));
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: em($wizard-icon-size);
+}

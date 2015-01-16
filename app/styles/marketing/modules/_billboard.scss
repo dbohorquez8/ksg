@@ -1,0 +1,47 @@
+.billboard,
+.billboard__play{
+  color: white;
+}
+
+.billboard{
+  @extend %relative;
+  background-image: asset-url("new/billboard-image.jpg", image);
+  background-position: center;
+  text-shadow: 0 2px rgba(#333D49, 0.2);
+  width: 100%;
+  padding: 17.65625% 0 0; /* 226 / 1280 */
+  margin-bottom: $line-height-computed * 3;
+  text-align: center;
+  @media #{$medium}{
+    @include background-size(cover);
+    min-height: 736px;
+  }
+  @media #{$large}{
+    padding: em(220) 0 0;
+  }
+}
+
+.billboard__main{
+  text-transform: uppercase;
+  text-shadow: 0 3px rgba(#333D49, 0.2);
+  font-size: em(36);
+  font-weight: 700;
+  color: inherit;
+  margin-top: 0;
+  @media #{$medium}{
+    font-size: em(55);
+    margin-bottom: $line-height-computed * 0.5;
+  }
+}
+
+.billboard__sub{
+  margin-bottom: $line-height-computed * 2;
+  color: inherit;
+  line-height: 1.8;
+}
+
+.billboard__play{
+  display: inline-block;
+  font-size: em(140);
+  margin-bottom: em(($line-height-computed * 3), 140);
+}

@@ -1,0 +1,35 @@
+$color-background-feature-brand:       $color-brand;
+$color-background-feature-light:       $gray-lighter;
+
+.features{
+  text-align: center;
+}
+
+.feature{
+  padding: 0 em($line-height-computed * 0.5);
+}
+
+.feature__title{
+  color: $color-brand;
+  font-size: em(14);
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: em($line-height-computed * 0.5);
+}
+
+.feature__icon{
+  margin-bottom: em($line-height-computed * 2);
+  @include circle-icon($size: 120, $icon-size: 44);
+}
+.feature__icon--brand,
+.feature__icon--grey{
+  color: white;
+}
+
+.feature__icon--brand{
+  background: $color-background-feature-brand;
+}
+
+.feature__icon--grey{
+  background: $color-background-feature-light;
+}

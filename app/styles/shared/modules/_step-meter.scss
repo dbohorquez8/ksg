@@ -1,0 +1,55 @@
+$color-meter-item-bg:           $gray-lighter;
+$color-meter-item-bg-done:      $color-brand;
+$color-meter-foreground:        $gray-light;
+
+
+
+
+.step-meter{
+  @include rem(13);
+  @media #{$small}{
+    @include rem(14);
+  }
+  @media #{$medium}{
+    @include rem(16);
+  }
+  color: $color-meter-foreground;
+  list-style-type: none;
+}
+
+.step-meter__bar{
+  background-color: $color-meter-item-bg;
+  border-right: 2px solid darken($color-meter-item-bg, 8%);
+  display: block;
+  height: em(24);
+}
+
+.step-meter__item{
+  text-align: left;
+  &:first-child{
+    .step-meter__bar{
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+    }
+  }
+  &:last-child{
+    .step-meter__bar{
+      border-radius: 0 $border-radius-base $border-radius-base 0;
+      border-right-width: 0;
+    }
+  }
+  &.is-done{
+    color: darken($color-meter-item-bg, 60%);
+    .step-meter__bar{
+      background-color: $color-meter-item-bg-done;
+      border-right-color: desaturate(darken($color-meter-item-bg-done, 10%), 10%);
+    }
+  }
+}
+
+.step-meter__description{
+  @include text-truncate;
+  @extend .face-bold;
+  font-size: em(10);
+  line-height: $line-height-small;
+  font-weight: 600;
+}

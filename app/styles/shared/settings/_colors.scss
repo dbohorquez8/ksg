@@ -1,0 +1,137 @@
+// DESCRIPTIVE COLOR VARIABLES:
+
+$teal:                        #12b0ae; // Backgrounds, Buttons, Text
+$teal-gray:                   #83BEBF; // Backgrounds
+$yellow-mustard:              #dca809; // Buttons, Text
+$blue-light:                  #798FA1;
+$blue-grey:                   #2c8e9a; // Backgrounds, Buttons
+$blue-dark:                   #0e597c; // Links, Text
+$orange:                      #EEAE76;
+$orange-dark:                 #DE855F;
+$red:                         #ef1616;
+$gold:                        #D8A301;
+$olive:                       #3F692C;
+$green:                       #50b193; // Backgrounds
+
+// New color palette:
+$teal-light:                  #D9EDEC;
+$aqua:                        #56B69F;
+$primary-blue:                #87C4CA;
+$secondary-blue:              #708897;
+$primary-green:               #5EA54D;
+$primary-yellow:              #E1CE38; // Currently unused
+$secondary-yellow:            #EEE59D; // Currently unused
+$cream-yellow:                #F8F8EE;
+$primary-red:                 #C44C4C; // Currently unused
+$secondary-salmon:            #E98D67; // Currently unused
+$secondary-gray:              #76777A;
+
+// Grays:
+$gray-darker:                 #222222;
+$gray-dark:                   #333333;
+$gray:                        #6D6D6D;
+$gray-light:                  #999999;
+$gray-lighter:                #AAAAAA;
+$gray-lightest:               #DFDFDF;
+$ivory:                       #F7F7F7;
+
+// FUNCTIONAL COLOR VARIABLES:
+
+// Text:
+$text-color-primary:          #505252;
+$text-color-secondary:        $teal;
+$text-color-light:            $blue-light;
+
+// Headers:
+$heading-color-primary:       $gray;
+$header-color-dark:           $gray-dark;
+$header-color-secondary:      $yellow-mustard;
+$header-color-tertiary:       $gold;
+$header-color-box:            $teal;
+$header-color-list:           $aqua;
+
+// Links:
+$link-color-primary:          $blue-dark;
+$link-hover-color:            darken($link-color-primary, 15%);
+$link-color-secondary:        $teal;
+
+// Backgrounds:
+$bg-color-primary:            $cream-yellow;
+$bg-color-secondary:          $teal-light;
+$bg-color-tertiary:           $ivory;
+$bg-color-dark:               $green;
+
+$bg-color-body:               $olive;
+$bg-color-dropdown:           $teal-gray;
+$bg-color-modal:              #E4F0EF;
+$bg-color-main-header:        #B1D4D1;
+$bg-color-range:              $teal;
+
+// Borders:
+$border-color-primary:        $teal-light;
+$border-color-secondary:      $teal;
+$border-color-light:          $cream-yellow;
+
+// Brand:
+$brand-primary:               #EAC239;
+$brand-success:               $primary-green;
+$brand-info:                  #00A5FF;
+$brand-warning:               $orange;
+$brand-warning-dark:          $orange-dark;
+$brand-danger:                #F95F4C;
+$brand-default:               $secondary-blue;
+$brand-ui:                    $gray-lightest;
+
+$color-brand:                 $brand-success;
+
+// Quick Links:
+$quick-link-primary:          $aqua;
+$quick-link-secondary:        $secondary-blue;
+$quick-link-tertiary:         $primary-blue;
+
+// Color Boxes:
+$color-box-background:        white;
+$color-box-foreground:        $gray;
+
+// Buttons:
+$button-primary:              #F1DA2D; // Currently unused
+$button-secondary:            #D4DCE2;
+$button-tertiary:             #AAB9C2; // Currently unused
+
+// Notifications:
+$message-notification:        $secondary-gray; // Currently unused
+$message-success:             $primary-green; // Currently unused
+$message-warning:             $primary-yellow; // Currently unused
+$message-error:               $primary-red; // Currently unused
+
+// Panels:
+
+$panel-text-color:                       inherit !default;
+
+$panel-background-color-default:         white !default;
+$panel-background-color-primary:         $cream-yellow !default;
+$panel-background-color-secondary:       $teal-light !default;
+$panel-background-color-muted:           $ivory !default;
+
+// Social Media:
+
+$color-blue-facebook: #365F9F;
+$color-blue-twitter:  #2CAEE4;
+
+// CANDIDATES FOR DELETION:
+
+// $turquoise:                   #00B0AC;
+// $color-text-header-primary:   $gray;
+// $color-text-header-secondary: $yellow-mustard;
+// $color-extra-headings:        $teal;
+// $color-text-link:             $blue-dark;
+// $body-bg-color:               $olive;
+// $color-base-background:       $olive;
+// $color-base-headings:         $gold;
+// $color-offer:                 #86CA70;
+// $color-error:                 $red;
+// $color-text-body:             $gray;
+// $color-foreground:            $gray;
+// $body-bg:                     $olive;
+// $hr-border:                   $gray-lighter;
+// $color-base-foreground:       $gray-dark;

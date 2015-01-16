@@ -1,0 +1,20 @@
+.payment-container{
+  @extend .panel--center;
+  max-width: 480px;
+}
+.payment-card{
+  @include opacity(0.2);
+  &.is-selected{ //this will highlight the current card
+    @include opacity(1);
+  }
+}
+.table-totals{
+  margin-bottom: $half-spacing-unit;
+  color: $brand-default;
+  > tbody > tr > td{
+    border-top-width: 0;
+  }
+  > tfoot > tr > td{
+    border-bottom: 1px solid #DDD;
+  }
+}

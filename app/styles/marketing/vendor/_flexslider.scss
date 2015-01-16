@@ -1,0 +1,37 @@
+/*@import "flexslider/flexslider";*/
+
+$color-control-background: lighten($color-brand, 35%);
+$color-control:            #BBBBBC;
+$color-control-active:     $color-brand;
+
+
+.flexslider{
+  box-shadow: none;
+  border: 0;
+  margin-bottom: 0;
+}
+.slides{
+  font-size: 1em;
+}
+.slider__control{
+  position: relative;
+  @extend .wrapper;
+  .flex-control-nav{
+    background: $color-control-background;
+    position: static;
+    display: inline-block;
+    width: auto;
+    padding: em(8) em(15);
+    line-height: 1;
+    border-radius: $border-radius-base;
+  }
+}
+.flex-control-paging li a{
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  background: $color-control;
+}
+.flex-control-paging li a.flex-active{
+  background: $color-control-active;
+}

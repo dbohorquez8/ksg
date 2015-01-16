@@ -1,0 +1,44 @@
+$color-confirmation-foreground-color:         $color-brand;
+$color-confirmation-text-color:               $gray-light;
+
+.main-content--simple{
+  margin-top: $line-height-computed * 2;
+}
+.main-content--simple__title,
+.main-content--simple__sub{
+  font-weight: 600;
+}
+.main-content--simple__title{
+  margin-bottom: 0;
+  line-height: $line-height-small;
+}
+.main-content--simple-push__title{
+  margin-bottom: $line-height-computed * 2;
+}
+.main-content--simple__sub{
+  margin-bottom: $line-height-computed * 2;
+  color: $color-confirmation-text-color;
+}
+
+.confirmation__icon,
+.confirmation__message,
+.confirmation__title,
+.main-content--simple__title,
+.main-content--simple-push__title{
+  color: $color-confirmation-foreground-color;
+}
+
+.confirmation__box{
+  & > .panel__body{
+    padding: $line-height-computed * 2 $line-height-computed * 0.5;
+  }
+}
+
+.confirmation__icon{
+  font-size: em(110px);
+}
+.confirmation__message{
+  @extend .uppercase;
+  font-weight: 700;
+  font-size: em(24);
+}

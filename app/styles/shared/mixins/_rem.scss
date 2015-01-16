@@ -1,0 +1,14 @@
+@function to-rem($des, $base: 16){
+  @if not unitless($des) {
+      $des: strip-units($des);
+  }
+  @return ($des / $base) *1rem;
+}
+
+@mixin rem($dest: 16, $prop: "font-size"){
+  @if not unitless($dest) {
+      $dest: strip-units($dest);
+  }
+  #{$prop}: #{$dest}px;
+  #{$prop}: to-rem($dest);
+}

@@ -1,0 +1,111 @@
+extends /layouts/_default
+
+block content
+  section
+    h1.ksg-jumbo Grid System
+    
+    .ksg-wrapper
+      section
+        h1.gamma Basic usage
+
+        .ksg-preview
+          .grid.ksg-grid-system__row
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+            .grid__item.one-twelfth
+              .ksg-grid-system__item .one-twelfth
+
+          .grid.ksg-grid-system__row
+            .grid__item.two-thirds
+              .ksg-grid-system__item .two-thirds
+            .grid__item.one-third
+              .ksg-grid-system__item .one-third
+
+          .grid.ksg-grid-system__row
+            .grid__item.one-third
+              .ksg-grid-system__item .one-third
+            .grid__item.one-third
+              .ksg-grid-system__item .one-third
+            .grid__item.one-third
+              .ksg-grid-system__item .one-third
+
+          .grid.ksg-grid-system__row
+            .grid__item.one-half
+              .ksg-grid-system__item .one-half
+            .grid__item.one-half
+              .ksg-grid-system__item .one-half
+
+        .ksg-code
+          code
+            pre.prettyprint.
+              &#x3C;div class=&#x22;grid&#x22;&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-twelfth&#x22;&#x3E;.one-twelfth&#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;
+                
+              &#x3C;div class=&#x22;grid&#x22;&#x3E;
+                &#x3C;div class=&#x22;grid__item two-thirds&#x22;&#x3E;.two-thirds&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-third&#x22;&#x3E;.one-third&#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;
+                
+              &#x3C;div class=&#x22;grid&#x22;&#x3E;
+                &#x3C;div class=&#x22;grid__item one-third&#x22;&#x3E;.one-third&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-third&#x22;&#x3E;.one-third&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-third&#x22;&#x3E;.one-third&#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;
+                
+              &#x3C;div class=&#x22;grid&#x22;&#x3E;
+                &#x3C;div class=&#x22;grid__item one-half&#x22;&#x3E;.one-half&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-half&#x22;&#x3E;.one-half&#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;                  
+
+      section
+        h1.gamma Full Column Grid
+
+        .ksg-preview
+          .grid.grid--full.ksg-grid-system__row
+            .grid__item.one-quarter
+              .ksg-grid-system__item .one-quarter (.three-twelfths)
+            .grid__item.one-third
+              .ksg-grid-system__item .one-third (.four-twelfths)
+            .grid__item.five-twelfths
+              .ksg-grid-system__item .five-twelfths
+
+        .ksg-code
+          code
+            pre.prettyprint.
+              &#x3C;div class=&#x22;grid grid--full&#x22;&#x3E;
+                &#x3C;div class=&#x22;grid__item one-quarter&#x22;&#x3E;.one-quarter&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item one-third&#x22;&#x3E;.one-third&#x3C;/div&#x3E;
+                &#x3C;div class=&#x22;grid__item five-twelfths&#x22;&#x3E;.five-twelfths&#x3C;/div&#x3E;
+              &#x3C;/div&#x3E;

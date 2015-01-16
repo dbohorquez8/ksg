@@ -1,0 +1,68 @@
+extends /layouts/_default
+
+block content
+  section
+    h1.ksg-jumbo Buttons
+    
+    .ksg-wrapper
+      .ksg-preview
+        button.button.button--default Default
+        | 
+        button.button.button--primary Primary
+        | 
+        button.button.button--success Success
+        | 
+        button.button.button--error Error
+        | 
+        button.button.button--disabled Disabled
+        | 
+        button.button.button--link Link
+
+      .ksg-code
+        code
+          pre.prettyprint.
+            &#x3C;button class=&#x22;button button--default&#x22;&#x3E;Default&#x3C;/button&#x3E;
+            &#x3C;button class=&#x22;button button--primary&#x22;&#x3E;Primary&#x3C;/button&#x3E;
+            &#x3C;button class=&#x22;button button--success&#x22;&#x3E;Success&#x3C;/button&#x3E;
+            &#x3C;button class=&#x22;button button--error&#x22;&#x3E;Error&#x3C;/button&#x3E;
+            &#x3C;button class=&#x22;button button--disabled&#x22;&#x3E;Disabled&#x3C;/button&#x3E;
+            &#x3C;button class=&#x22;button button--link&#x22;&#x3E;Link&#x3C;/button&#x3E;                
+
+      section.ksg-wrapper
+        h1.gamma Button Sizes
+
+        .ksg-preview
+          .push--bottom
+            button.button.button--default.button--tiny Tiny
+            | 
+            button.button.button--default.button--small Small
+            | 
+            button.button.button--default Default
+            | 
+            button.button.button--default.button--large Large
+            | 
+            button.button.button--default.button--huge Huge
+
+          .push--bottom
+            button.button.button--default.button--flat Flat
+            | 
+            button.button.button--default.button--round Round
+
+          .push--bottom
+            button.button.button--default.button--wide Wide
+
+          .push--bottom
+            button.button.button--default.button--full Full
+
+        .ksg-code
+          code
+            pre.prettyprint.
+              &#x3C;button class=&#x22;button button--default button--tiny&#x22;&#x3E;Tiny&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--small&#x22;&#x3E;Small&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default&#x22;&#x3E;Default&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--large&#x22;&#x3E;Large&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--huge&#x22;&#x3E;Huge&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--wide&#x22;&#x3E;Wide&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--square&#x22;&#x3E;Square&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--round&#x22;&#x3E;Round&#x3C;/button&#x3E;
+              &#x3C;button class=&#x22;button button--default button--full&#x22;&#x3E;Full&#x3C;/button&#x3E;

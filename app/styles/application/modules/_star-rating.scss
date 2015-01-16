@@ -1,0 +1,133 @@
+.rateit,
+.star-rating {
+  display: -moz-inline-box;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+%rate-it-bg{
+  .svg &{
+    background-image: image-url("new/star.svg");
+  }
+  .no-svg &{
+    background-image: image-url("new/star.png");
+  }
+}
+
+.rateit .rateit-range,
+.rateit .rateit-hover,
+.rateit .rateit-hover-rtl,
+.rateit .rateit-selected,
+.rateit .rateit-preset,
+.rateit .rateit-preset-rtl,
+.star-rating__range,
+.star-rating__selected{
+  @extend %rate-it-bg;
+}
+
+.rateit .rateit-range,
+.star-rating__range{
+  position: relative;
+  display: -moz-inline-box;
+  display: inline-block;
+  height: 24px;
+  outline: none;
+}
+
+.rateit .rateit-range * {display:block;}
+
+/* for IE 6 */
+* html .rateit, * html .rateit .rateit-range{
+  display: inline;
+}
+
+/* for IE 7 */
+* + html .rateit, * + html .rateit .rateit-range{
+  display: inline;
+}
+
+.rateit .rateit-hover,
+.rateit .rateit-selected,
+.star-rating__selected{
+  position: absolute;
+  left: 0px;
+}
+
+.rateit .rateit-hover-rtl,
+.rateit .rateit-selected-rtl,
+.star-rating__selected--rtl{
+  left: auto;
+  right: 0px;
+}
+
+.rateit .rateit-hover{
+  background-position: left 14px;
+}
+
+.rateit .rateit-hover-rtl{
+  background-position: right -32px;
+}
+
+.rateit .rateit-selected,
+.star-rating__selected{
+  @extend %rate-it-bg;
+  background-position: left 14px;
+}
+
+.rateit .rateit-selected-rtl{
+  background-position: right -17px;
+}
+
+.rateit .rateit-preset{
+  @extend %rate-it-bg;
+  background-position: left 14px;
+}
+
+.rateit .rateit-preset-rtl{
+  @extend %rate-it-bg;
+  background-position: left 14px;
+}
+
+.rateit button.rateit-reset{
+  background: url(delete.gif) 0 0;
+  width: 16px;
+  height: 16px;
+  display: -moz-inline-box;
+  display: inline-block;
+  float: left;
+  outline: none;
+  border:none;
+  padding: 0;
+}
+
+.rateit button.rateit-reset:hover, .rateit button.rateit-reset:focus{
+  background-position: 0 -16px;
+}
+
+.rating__number{
+  color: $gray-light;
+  margin: 0 2px;
+  vertical-align: middle;
+}
+
+.star-rating{
+  line-height: 1;
+  .star-rating__range,
+  .star-rating__selected{
+    height: 14px;
+  }
+  .star-rating__range{
+    width: 70px;
+  }
+  .star-rating__selected{
+
+  }
+}

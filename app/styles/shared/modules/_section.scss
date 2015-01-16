@@ -1,0 +1,48 @@
+//mostly used in the marketing site
+$color-background-section:                white;
+$color-foreground-section:                $gray-dark;
+$color-border-section:                    transparent;
+
+$color-background-dark-section:           #FAFBFC;
+$color-foreground-dark-section:           $gray-dark;
+$color-border-dark-section:               $gray-lighter;
+
+
+
+.section{
+  @include theme-mix($bg: white, $color: $color-foreground-section, $border: $color-border-section, $radius: false);
+}
+
+.section__title{
+  margin-bottom: em($line-height-computed * 0.5);
+  @media #{$small}{
+    margin-bottom: em($line-height-computed * 1.5);
+  }
+}
+
+.section--gap{
+  padding: em($line-height-computed * 2) 0;
+}
+
+
+.section--dark{
+  @extend .section;
+  @include theme-mix($bg: $color-background-dark-section, $color: inherit, $border: $color-border-dark-section, $radius: false);
+  border-left-width: 0;
+  border-right-width: 0;
+}
+.section--dark-last{
+  @extend .section--dark;
+  border-bottom-color: transparent;
+}
+
+.section--full{
+  @extend .section;
+  padding: $line-height-computed * 2;
+  box-shadow: 3px 0 6px -2px rgba(#C1CFD7, 0.8),
+              -3px 0 6px -2px rgba(#C1CFD7, 0.8);
+}
+
+.section--shade{
+  @include linear-gradient(white 0%, $color-background-dark-section 80%, $fallback: $color-background-dark-section);
+}

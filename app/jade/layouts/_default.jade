@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    title Style Guide
+    meta(charset='UTF-8')
+
+    // build:css /styles/main.css
+    link(href='/styles/main.css', rel='stylesheet')
+    // endbuild
+
+  body(class=page)
+    .ksg-main-wrapper
+      header.ksg-main-header
+          .ksg-wrapper
+            a.ksg-logo(href="/"): img(src='images/koombea.svg', alt='Koombea')
+
+            nav.ksg-main-nav
+              ul
+                li.ksg-main-nav__item: a(href="grid-system.html") Grid System
+                li.ksg-main-nav__item: a(href="typography.html") Typography
+                li.ksg-main-nav__item: a(href="buttons.html") Buttons
+
+        main.ksg-main-content
+          block content
+
+    // Footer
+    footer.ksg-main-footer
+
+    // build:js /scripts/main.js
+    
+    script(src='/bower_components/jquery/dist/jquery.js')
+    script(src='/bower_components/google-code-prettify/bin/prettify.min.js')
+    
+    script(src='/scripts/main.js')
+    // endbuild

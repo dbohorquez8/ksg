@@ -1,0 +1,45 @@
+@mixin flash-alert-styles($bg, $color) {
+  @extend .alert-box;
+  background-color: $bg;
+  color: $color;
+}
+
+$color-alert-foreground:        white;
+
+
+$color-alert-notice:            $brand-info;
+$color-alert-error:             $brand-danger;
+$color-alert-warning:           $brand-warning;
+$color-alert-success:           $brand-success;
+
+
+$icon-warning:                  '.icon-triangle';
+$icon-notice:                   '.icon-exclamation';
+$icon-success:                  '.icon-checkmark';
+$icon-error:                    '.icon-cancel';
+
+$alerts: (notice, error, warning, success);
+$alerts-colors: ($color-alert-notice, $color-alert-error, $color-alert-warning, $color-alert-success);
+
+.alert-box{
+  @include rem(12);
+  background: white;
+  display: block;
+  border-radius: $border-radius-base;
+  padding: $half-spacing-unit;
+  max-width: 600px;
+  clear: both;
+  margin: auto;
+  margin-bottom: $base-spacing-unit;
+  .alert-box__icon{
+    margin-right: em(12);
+  }
+}
+
+.alert-box__text{
+  font-weight: 700;
+}
+
+.alert-box--error{
+  @include flash-alert-styles(#FBBEC5, $brand-danger);
+}

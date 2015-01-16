@@ -1,0 +1,26 @@
+.actions-nav{
+  max-width: 430px;
+}
+
+.actions-nav__checkbox,
+.actions-nav__group{
+  display: none;
+}
+.actions-nav__group{
+  @extend .grid;
+  @extend .grid--narrow;
+  margin-bottom: $half-spacing-unit;
+}
+
+.options-nav{
+  @extend .nav;
+  font-size: em(14, 12);
+  font-weight: 700;
+  margin-bottom: 16px;
+  & > li{
+    margin: 0 6px;
+  }
+  a{
+    color: #797D7E;
+  }
+}

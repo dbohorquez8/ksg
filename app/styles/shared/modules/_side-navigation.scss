@@ -1,0 +1,96 @@
+$menu-font-size:    10;
+$item-height:       $navigation-item-height;
+$navigation-width:  $navigation-width;
+$total-of-items:    9;
+
+@mixin navigation-variant($background-color, $border-container-color, $border-item-color, $border-item-bottom-color, $foreground-color) {
+  background-color: $background-color;
+  border-color: $border-container-color;
+  .navigation--dashboard__item{
+    border-color: $border-item-color;
+    border-bottom-color: $border-item-bottom-color;
+    color: $foreground-color;
+    &:hover{
+      color: $foreground-color;
+      text-shadow: 0 0 12px rgba(white, 0.3);
+    }
+    &:active,
+    &:focus,
+    &.is-active{
+      box-shadow: inset 0 0 em(24) rgba(darken($color-tertiary, 8%), 0.8);
+      color: darken($foreground-color, 12%);
+    }
+  }
+}
+
+.navigation--dashboard{
+  border-right: 1px solid transparent;
+  position: fixed;
+  box-shadow: 2px 0 4px rgba(black, 0.2);
+  top: 0;
+  z-index: 2;
+  font-size: inherit;
+  overflow: auto;
+  height: 100%;
+  width: $navigation-width;
+}
+.navigation--dashboard__item{
+  @include transition(all 0.2s linear);
+  @include size(100% em($item-height, $menu-font-size));
+  font-size: em($menu-font-size);
+  padding-top: em(14, $menu-font-size);
+  font-weight: 700;
+  border-style: solid solid solid none;
+  border-width: 1px;
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  & > .icon-locations{font-size: em(23, $menu-font-size)}
+  & > .icon-user{font-size: em(23, $menu-font-size)}
+  & > .icon-keys{font-size: em(28, $menu-font-size)}
+  &:first-child{
+    border-top-width: 0;
+    padding-top: em(20, $menu-font-size);
+  }
+  &.item__settings{
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.navigation--dashboard__icon{
+  font-size: em(20, $menu-font-size);
+  line-height: $line-height-small;
+  display: block;
+}
+
+.navigation--dashboard--dark{
+  @include navigation-variant($color-tertiary, $color-tertiary, lighten($color-tertiary, 10%), darken($color-tertiary, 10%), white);
+  //Gradient text shadow for the icons
+  .navigation--dashboard__icon,
+  .navigation--dashboard__icon:before{
+    background: -webkit-linear-gradient(white, #E2F3F8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.navigation--dashboard--light{
+  @include navigation-variant(#E2E8EB, #C9CED1, white, #C9CED1, #939EA4);
+}
+
+.navigation--dashboard__container{
+  position: relative;
+  height: 100%;
+  padding-bottom: em($item-height);
+}
+
+
+@for $i from 1 through $total-of-items{
+  .navigation--dashboard__container-#{$i}{
+    $height: $item-height * $i;
+    min-height: em($height);
+  }
+}
+
+

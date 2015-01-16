@@ -1,0 +1,51 @@
+@import "buttons-base";
+
+.button--default {
+  @include button-style($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+.button-gradient--default {
+  @include button-style($btn-default-color, #E6EBEE, $btn-default-border);
+}
+.button--primary {
+  @include button-style($btn-primary-color, $btn-primary-bg, $btn-primary-border);
+}
+// Success appears as green
+.button--success {
+  @include button-style($btn-success-color, $btn-success-bg, $btn-success-border);
+}
+// Info appears as blue-green
+.button--info {
+  @include button-style($btn-info-color, $btn-info-bg, $btn-info-border);
+}
+// Warning appears as orange
+.button--warning {
+  @include button-style($btn-warning-color, $btn-warning-bg, $btn-warning-border);
+}
+// Danger and error appear as red
+.button--danger {
+  @include button-style($btn-danger-color, $btn-danger-bg, $btn-danger-border);
+}
+
+.button--highlight{
+  @include button-style(white, #FF6600, #FF6600);
+}
+
+.button--action{
+    @extend .button;
+    @include transition(all 0.2s ease-out);
+    @include button-size(em(20, 16), em(24, 16), em(16), $line-height-large, 0);
+    background-color: rgba(white, 0.3);
+    color: white;
+    font-weight: 700;
+    border: 3px solid white;
+    text-transform: uppercase;
+    border-radius: 0;
+    &:hover{
+        background-color: rgba(white, 0.5);
+        color: white;
+    }
+    &:active{
+        background-color: rgba(white, 0.6);
+        color: white;
+    }
+}

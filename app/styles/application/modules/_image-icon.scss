@@ -1,0 +1,26 @@
+.image-icon{
+  @extend %main-sprite;
+}
+
+@mixin image-icon($bs, $w, $h) {
+  background-position: $bs;
+  width: $w;
+  height: $h;
+}
+
+.image-icon--visa{
+  @include image-icon(-1px -792px, 30px, 19px);
+}
+
+.image-icon--mastercard{
+  @include image-icon(-38px -792px, 30px, 19px);
+}
+.image-icon--amex{
+  @include image-icon(-75px -792px, 30px, 19px);
+}
+.image-icon--discover{
+  @include image-icon(-112px -792px, 30px, 19px);
+}
+.image-icon--card-description{
+  @include image-icon(-148px -788px, 83px, 24px);
+}

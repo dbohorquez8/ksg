@@ -1,0 +1,12 @@
+.round-number{
+  @extend %round-number;
+}
+.round-number--large{
+  @include round-number-size(36, 14);
+}
+.round-number--green{
+  @include round-number-style(#8EC97C);
+}
+.round-number--light{
+	@include round-number-style(#B1D4D1);
+}

@@ -1,0 +1,29 @@
+body,
+html{
+  height: 100%;
+}
+.main-content{
+  clear: both;
+}
+.wrapper{
+  @extend .cf;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.page-wrap{
+  min-height: 100%;
+  margin-bottom: -64px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 64px;
+}
+
+.main-header{
+  top: 0;
+}

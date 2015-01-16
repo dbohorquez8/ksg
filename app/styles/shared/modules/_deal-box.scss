@@ -1,0 +1,111 @@
+$color-deal-title:                $gray;
+$color-deal-service:              $color-brand;
+$color-background-deal-service:   lighten($color-brand, 30%);
+$color-foreground-box:            $gray-darker;
+$stats-box-height:                172;
+
+.deal-box{
+  @extend .panel;
+  box-shadow: 0 0 3px rgba(#465660, 0.31);
+  border-width: 0;
+}
+.deal__title{
+  @include rem(28);
+  @extend .text-center;
+  color: $color-deal-title;
+  font-weight: 600;
+  font-style: italic;
+  margin: $line-height-computed  0 $line-height-computed * 0.5;
+}
+
+.discount-box{
+  @include size(60);
+  display: inline-block;
+  line-height: em(60);
+  font-weight: 600;
+  text-align: center;
+  & > sup{
+    font-size: em(14);
+    top: em(-10, 14);
+  }
+}
+.discount-box__value{
+  font-size: em(28);
+}
+.discount-box--brand{
+  @include theme-mix($border: true);
+}
+
+.deal__info{
+  position: relative;
+}
+
+.deal__service{
+  @include position(absolute, 0 0px 0px 60px);
+  display: inline-block;
+  font-weight: 400;
+  background-color: $color-background-deal-service;
+  color: $color-deal-service;
+  padding: 0 $line-height-computed;
+}
+.deal__text{
+  color: $gray-light;
+  font-weight: 700;
+}
+
+
+.stats-box{
+  @extend .panel;
+  background-color: white;
+  & > .table-responsive:last-of-type{
+    margin-bottom: 0;
+  }
+}
+.stats-box__head,
+.stats-box__foot{
+  position: relative;
+    & > :last-child{
+    margin-bottom: 0;
+  }
+}
+.stats-box__head{
+  @extend .panel__head;
+}
+.stats-box__foot{
+  @extend .panel__footer;
+}
+.stats-box__title{
+  font-size: em(14);
+  font-weight: 700;
+  margin: 0;
+}
+.stats-box__body{
+  @extend .panel__body;
+  height: em($stats-box-height);
+}
+
+.stats-box .table-responsive,
+.stats-box__body{
+  overflow-y: auto;
+}
+
+.stats-box--default{
+  @include panel-variant($gray-lighter, inherit, white);
+  border-width: 0;
+}
+.stats-box-gradient--default{
+  @include panel-variant(#DDDFE1, #46535F, #E2E8EB);
+}
+
+.stats-box__body--bigger{
+  @extend .stats-box__body;
+}
+.stats-box .table-responsive,
+.stats-box__body--bigger{
+  height: em($stats-box-height+53);
+}
+
+.stats-box__head-extra{
+  font-weight: 700;
+  font-size: em(12);
+}

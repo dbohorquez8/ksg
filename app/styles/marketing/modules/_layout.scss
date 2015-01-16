@@ -1,0 +1,26 @@
+.main-content{
+  clear: both;
+}
+.wrapper{
+  @extend .cf;
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.page-wrap{
+  min-height: 100%;
+  margin-bottom: -82px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+  height: 82px;
+}
+
+
+.main-header{
+  top: 0;
+}

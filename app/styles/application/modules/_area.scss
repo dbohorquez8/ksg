@@ -1,0 +1,11 @@
+.spaced-area{
+  padding: $base-spacing-unit * 2 0;
+}
+.spaced-area__features,
+.spaced-area__title{
+  margin-bottom: 40px;
+}
+
+.spaced-area--light{
+  background-color: white;
+}

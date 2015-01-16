@@ -1,0 +1,10 @@
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper--small{
+  max-width: 920px;
+  padding: 0 $half-spacing-unit;
+}

@@ -1,0 +1,57 @@
+//.ui-slider
+.cost-meter__cost{
+  color: #8EC97C;
+  font-weight: 600;
+  display: block;
+  font-size: em(42);
+  line-height: $line-height-large;
+  margin-bottom: .5em;
+  text-align: center;
+}
+
+.cost-meter{
+  max-width: 330px;
+  &.ui-slider-horizontal{
+    font-family: $font-family-sans-serif;
+    font-size: 1em;
+    height: 1.5em;
+    @include linear-gradient(to right, #8CCA78, #EBE39A , #DE8662 100%);
+    border-width: 4px;
+    border-color: #FFF;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    margin: em(30) 10px;
+    // border-style: solid;
+  }
+  &.ui-slider-horizontal .ui-slider-handle{
+    // border-style: solid;
+    background: #8CCA78;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    width: 2.4em;
+    height: 2.4em;
+    border-width: 4px;
+    border-color: white;
+    margin-left: -1.3em;
+    top: -0.8em;
+    &:after{
+      content: "";
+    }
+  }
+}
+
+.cost-meter__addon{
+  position: absolute;
+  bottom: 120%;
+  z-index: 100;
+  font-size: em(18);
+  font-weight: 600;
+  color: $gray;
+}
+
+.cost-meter__addon--min{
+  left: 0;
+}
+
+.cost-meter__addon--max{
+  right: 0;
+}

@@ -1,0 +1,43 @@
+//Vendor Base Styles
+@import "bourbon/dist/_bourbon.scss";
+
+//Settings for this Layout
+@import "shared/settings/colors";
+@import "application/settings/settings";
+
+//shared Mixins
+@import "shared/mixins";
+
+//Shared Base
+@import "shared/base/normalize";
+@import "shared/base/helpers";
+@import "shared/base/grids";
+@import "shared/base/fonts";
+@import "shared/base/font-icons";
+
+//Shared base objects
+@import "shared/objects/nav";
+@import "shared/objects/island";
+@import "shared/objects/split";
+@import "shared/objects/media";
+@import "shared/objects/rule";
+@import "shared/objects/block-list";
+
+//Shared Modules and Components
+@import "shared/modules/buttons-base";
+@import "shared/modules/logo";
+@import "shared/modules/button-group";
+@import "shared/modules/forms";
+@import "shared/modules/input-group";
+@import "shared/modules/panel";
+@import "shared/modules/section";
+@import "shared/modules/table";
+@import "shared/modules/lists";
+@import "shared/modules/visibility";
+@import "shared/modules/arrow";
+@import "shared/modules/popup-animations";
+@import "shared/modules/popup";
+@import "shared/modules/sharethis";
+
+//actual manifest/layout stuff
+@import "application/main";

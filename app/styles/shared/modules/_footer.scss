@@ -1,0 +1,14 @@
+$color-footer-foreground:             $gray-light;
+$color-footer-background:             white;
+$color-footer-border:                 $gray-lighter;
+
+.main-footer{
+  background-color: $color-footer-background;
+  text-align: right;
+  color: $color-footer-foreground;
+  border-top: 1px solid $color-footer-border;
+  p{
+    font-size: em(13);
+    margin: em($line-height-computed * 1.5) 0;
+  }
+}

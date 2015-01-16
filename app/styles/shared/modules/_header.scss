@@ -1,0 +1,56 @@
+$color-alpha:                               0.88;
+$header-height:                             $header-height;
+
+$color-background-header:                   white;
+$color-border-header:                       $color-brand;
+
+
+@mixin header-variant($background, $border) {
+  border-color: $border;
+  @include linear-gradient(to bottom, $background, rgba($background, $color-alpha) 80%, rgba(darken($background, 5%), $color-alpha), $fallback: transparent);
+  .no-cssgradients &{
+    background-color: $background;
+  }
+}
+
+.main-header{
+  @include clearfix();
+  @extend %relative;
+  border-top: 4px solid;
+  display: block;
+  height: auto;
+  box-shadow: 0 3px 6px rgba(#000, 0.2);
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  @media #{$medium}{
+    height: 76px;
+  }
+  .main-logo{
+    float: none;
+    margin: em(6) 0;
+    @media #{$medium}{
+      float: left;
+      margin: em(16) 0;
+    }
+  }
+  .general &{
+    position: relative;
+  }
+  .main-navigation{
+    margin: em(6) 0;
+    @media #{$medium}{
+      float: right;
+      margin: em(22) 0;
+    }
+  }
+}
+
+.main-header--default{
+  @include header-variant($color-background-header, ($color-border-header) );
+}
+
+.main-header--dark{
+  @include header-variant(#293544, #7A8C99);
+}

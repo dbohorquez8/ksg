@@ -1,0 +1,261 @@
+.card{
+  @extend .panel;
+  @include rem(12);
+  border-radius: $border-radius-large -1;
+  border: 0;
+  box-shadow: 1px 1px 2px rgba(black, 0.2);
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 280px;
+  max-width: 300px;
+}
+
+.card--no-height{
+  min-height: 0;
+}
+
+.card__image{
+  border-radius: $border-radius-large - 2 $border-radius-large - 2 0 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.card--natural{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card--natural,
+.card--natural .card__image{
+  height: auto;
+}
+
+.card--natural .card__image{
+  border-bottom-width: 0;
+  img{
+    width: 100%;
+  }
+}
+
+.card__title{
+  font-size: em(18);
+  line-height: $line-height-small;
+  margin: 0 0 0;
+}
+
+.card__subtitle{
+  color: lighten($brand-success, 5%);
+  font-weight: 600;
+  margin-bottom: floor($half-spacing-unit / 2);
+}
+
+.card__options{
+  color: $gray-light;
+  margin-bottom: $half-spacing-unit / 2;
+  & > *{
+    margin: 0 3px;
+  }
+  a{
+    color: inherit;
+  }
+}
+
+.card__options--positioned{
+  position: absolute;
+  left: $half-spacing-unit;
+  right: $half-spacing-unit;
+  bottom: $half-spacing-unit;
+  font-size: em($font-size-small);
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.card--desktop{
+  .card__body{
+    padding: $half-spacing-unit;
+    padding-bottom: $base-spacing-unit * 2;
+  }
+  @media #{$small} {
+    box-shadow: none;
+    height: auto;
+    max-width: none;
+    .card__image{
+      float: left;
+      overflow: visible;
+      height: auto;
+      border: 1px solid $brand-ui;
+      margin-bottom: $base-spacing-unit;
+      border-radius: 0;
+      & img{
+        border: 1px solid white;
+      }
+
+      &:after{
+        content: none;
+      }
+    }
+    .card__body{
+      overflow: hidden;
+      padding-top: $half-spacing-unit / 2;
+      padding-bottom: $half-spacing-unit / 2;
+      padding-left: $base-spacing-unit;
+      padding-right: $base-spacing-unit;
+    }
+    .card__options{
+      text-align: left;
+      margin-bottom: 0;
+      left: 0;
+      top: 102%;
+      & > *{
+        float: none;
+      }
+    }
+  }
+  @media #{$medium} {
+    .card__title{
+      font-size: em(28);
+      line-height: $line-height-large;
+    }
+    .card__subtitle{
+      margin-bottom: $half-spacing-unit;
+      font-size: em(18);
+    }
+  }
+}
+
+
+
+.card-complete{
+  @include rem(12);
+  background-color: white;
+  border-radius: $border-radius-base;
+  border-width: 0;
+  margin-bottom: $half-spacing-unit;
+  @extend .panel--center;
+  @media #{$small} {
+    margin-bottom: $base-spacing-unit;
+  }
+  .card__title{
+    font-size: em(18);
+    @media #{$medium} {
+      font-size: em(24);
+    }
+  }
+}
+.card-complete__image,
+.card-complete__body{
+  padding: $half-spacing-unit;
+  @media #{$medium} {
+    padding: $base-spacing-unit $base-spacing-unit - 2 $base-spacing-unit floor($half-spacing-unit / 2);
+  }
+}
+.card-complete__image{
+  padding: 0;
+  overflow: hidden;
+  img{
+    border-radius: $border-radius-large $border-radius-large 0 0;
+    max-width: none;
+    width: 100%;
+  }
+  @media #{$small} {
+    float: left;
+    padding: $half-spacing-unit;
+    height: auto;
+    overflow: visible;
+    img{
+      border-radius: $border-radius-large;
+      max-width: 250px;
+      width: auto;
+    }
+  }
+  @media screen and (min-width: 700px) {
+    img{
+      max-width: 300px;
+    }
+  }
+  @media #{$medium} {
+    padding: $base-spacing-unit;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.card-complete__image--no-clip{
+  height: auto;
+}
+.card-complete__body{
+  border-color: $brand-ui;
+  border-width: 0;
+  border-style: solid;
+  @media #{$small} {
+    overflow: hidden;
+  }
+}
+
+.card__send-phone{
+  max-width: 168px;
+}
+
+
+.text-offer{
+  max-width: 400px;
+}
+
+.consumer-slider__container{
+  padding: $base-spacing-unit * 1.5;
+  padding-bottom: $base-spacing-unit * 2;
+}
+
+.consumer-slider{
+  @include rem(14);
+  background-color: $cream;
+  padding: $base-spacing-unit $base-spacing-unit;
+  border-radius: $border-radius-base;
+  @media #{$medium} {
+    padding-top: $base-spacing-unit * 3;
+    padding-bottom: $base-spacing-unit * 3;
+  }
+  .flex-direction-nav{
+    display: none;
+    @media #{$medium} {
+      display: block;
+    }
+  }
+  .flex-control-nav{
+    bottom: -20px;
+  }
+  .slider-figure{
+    font-size: em(160, 14);
+    color: #8EC97C;
+  }
+}
+
+.copy-area{
+  padding: $half-spacing-unit $base-spacing-unit / 2;
+  margin: 0 $half-spacing-unit 0 0;
+  border: 1px solid $brand-ui;
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: $border-radius-base;
+  box-shadow: inset 0 2px 2px rgba(black, 0.10);
+  float: left;
+}
+
+.copy-area--no-upper{
+  @extend .copy-area;
+  text-transform: none;
+}
+
+.copy-area__container{
+  margin-bottom: 0;
+}
+.copy-area__text{
+  padding-top: 3px;
+  overflow: hidden;
+  display: inline-block;
+  line-height: 1.33;
+}
